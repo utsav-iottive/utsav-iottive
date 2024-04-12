@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">chat app</string>
+    <string name="loginText">Login</string>
+    <string name="registerText">Register</string>
+    <string name="goLogin">Already have an account?</string>
+    <string name="goRegister">Don\'t have an account?</string>
+    <string name="checkboxText">You must agree to the terms and conditions to register an account</string>
+</resources>

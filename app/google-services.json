@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "284440522392",
+    "project_id": "bionic-aspect-418409",
+    "storage_bucket": "bionic-aspect-418409.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284440522392:android:23294910cc54c6a4c4aaed",
+        "android_client_info": {
+          "package_name": "com.example.chatapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJaMjNkbKSgogHbnRm1WwVA5y5sftYzGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

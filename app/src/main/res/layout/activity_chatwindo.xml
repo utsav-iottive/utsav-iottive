@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/chatappbg"
+    android:layout_height="match_parent"
+    tools:context=".Chatwindo">
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:background="@color/teal_700"
+      android:id="@+id/ll1"
+      >
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:src="@drawable/left"
+        android:id="@+id/leftBtn"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileimgg"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:visibility="visible"
+        android:src="@drawable/cmd"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="1dp"
+      />
+
+
+
+    <TextView
+        android:id="@+id/recivername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="text"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_margin="10dp"/>
+
+
+
+
+  </LinearLayout>
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="502dp"
+      android:layout_above="@id/ll2"
+      android:layout_below="@+id/ll1"
+    >
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/msgadpter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll2"
+        android:layout_below="@+id/ll1"
+        android:layout_marginTop="7dp"
+        app:stackFromEnd="true"
+        android:layout_marginBottom="-7dp"
+        android:padding="10dp" />
+  </ScrollView>
+  <include
+      layout="@layout/custom_dialog"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="90dp"
+      android:layout_gravity="bottom"
+      android:id="@+id/customDialog"
+      android:visibility="gone"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <LinearLayout
+      android:id="@+id/ll2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginBottom="10dp"
+      android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginRight="7dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp">
+
+      <EditText
+          android:id="@+id/textmsg"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center"
+          android:layout_marginLeft="30dp"
+          android:layout_marginRight="50dp"
+          android:background="@null"
+          android:hint="Messages"
+          android:paddingStart="13.00dp" />
+
+
+      <ImageView
+          android:id="@+id/imageOpen"
+          android:layout_width="30dp"
+          android:layout_height="50dp"
+          android:layout_gravity="end|bottom"
+          android:layout_marginRight="10dp"
+          android:src="@drawable/baseline_add_link_24" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sendbtnn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="5dp"
+        app:cardCornerRadius="30dp">
+
+
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:background="@drawable/sendbuttonbg"
+         android:orientation="vertical">
+       <ImageView
+           android:layout_width="50dp"
+           android:layout_height="50dp"
+           android:layout_gravity="center"
+           android:src="@drawable/sending" />
+     </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+  </LinearLayout>
+
+</RelativeLayout>
